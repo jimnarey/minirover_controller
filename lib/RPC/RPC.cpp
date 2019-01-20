@@ -13,25 +13,24 @@
 // Constructor /////////////////////////////////////////////////////////////////
 // Function that handles the creation and setup of instances
 
-RPC::RPC(int givenValue)
+RPC::RPC()
 {
   // initialize this instance's variables
-  value = givenValue;
+  // comSerial = refSerial;
+  // comSerial* = refSerial*;
 
   // do whatever is required to initialize the library
-  pinMode(13, OUTPUT);
-  Serial.begin(9600);
+//   pinMode(13, OUTPUT);
+//   Serial.begin(9600);
 }
 
 // Public Methods //////////////////////////////////////////////////////////////
 // Functions available in Wiring sketches, this library, and other libraries
 
-void RPC::doSomething(void)
+void RPC::setSerial(Stream *streamObject)
 {
   // eventhough this function is public, it can access
   // and modify this library's private variables
-  Serial.print("value is ");
-  Serial.println(value);
-
+  _streamRef = streamObject;
 }
 

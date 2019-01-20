@@ -10,15 +10,18 @@
 // include types & constants of Wiring core API
 // #include "WConstants.h"
 #include <Arduino.h>
+// #include <HardwareSerial.h>
+// #include <HardwareSerial.h>
 
 // library interface description
 class RPC
 {
-  // user-accessible "public" interface
+  private:
+    Stream *_streamRef;
+
   public:
-    RPC(int);
-    int value;
-    void doSomething(void);
+    RPC();
+    void setSerial(Stream *streamObject);
 };
 
 #endif
