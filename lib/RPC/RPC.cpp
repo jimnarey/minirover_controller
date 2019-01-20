@@ -1,19 +1,19 @@
 /*
-  Drive.h - Drive library for Wiring - implementation
+  RPC.h - RPC library for Wiring - implementation
   Copyright (c) 2006 John Doe.  All right reserved.
 */
 
 
 #include <Arduino.h>
 // include this library's description file
-#include "Drive.h"
+#include "RPC.h"
 
 
 
 // Constructor /////////////////////////////////////////////////////////////////
 // Function that handles the creation and setup of instances
 
-Drive::Drive(int givenValue)
+RPC::RPC(int givenValue)
 {
   // initialize this instance's variables
   value = givenValue;
@@ -26,7 +26,7 @@ Drive::Drive(int givenValue)
 // Public Methods //////////////////////////////////////////////////////////////
 // Functions available in Wiring sketches, this library, and other libraries
 
-void Drive::doSomething(void)
+void RPC::doSomething(void)
 {
   // eventhough this function is public, it can access
   // and modify this library's private variables
